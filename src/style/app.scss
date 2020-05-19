@@ -3,4 +3,9 @@
     align-items: center;
     justify-content: center;
     min-height: 600px;
+    flex-direction: column;
+
+    .typist-header{
+        display: inline-block;
+    }
 }
