@@ -2,8 +2,43 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 600px;
+    min-height: 1000px;
     flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    background-image: url("./imageedit_1_5917627933.png");
+    background-size: 100% auto;
+
+    .line {
+        display:block;
+        position:absolute;
+        top:45%;
+        left:50%;
+        border-bottom:3px solid black;
+        width:0%;
+        text-align:center;
+        animation: line 2s linear forwards;
+      }
+      
+      @keyframes line {
+        from {
+          left:50%;
+          width:0%;
+        }
+        to {
+          left:5%;
+          width:90%;
+        }
+      }
+    .line2 {
+        display:block;
+        position:absolute;
+        top:45%;
+        left:50%;
+        border-bottom:3px solid black;
+        width:0%;
+        text-align:center;
+        // animation: line 2s linear forwards;
+      }
 
     .typist-header{
         display: inline-block;

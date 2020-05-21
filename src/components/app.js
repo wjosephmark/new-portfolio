@@ -11,8 +11,9 @@ export default function App(){
 
   return (
     <div className='app'>
-      <div className="typist">
-        <Typist cursor={{show: false}}>
+      <div className="line"></div>
+      <div className="typist-warpper">
+        <Typist cursor={{show: false}} delay={1000}>
           <h1 className="typist-header" >{firstSentence}</h1>
           <Typist.Backspace count={firstSentence.length} delay={800} />
           <h1 className="typist-header" >{secondSentence}</h1>
@@ -22,9 +23,9 @@ export default function App(){
           <h1 className="typist-header" >m {fourthSentence}</h1>
           <Typist.Backspace count={15} delay={800} />
           <h1 className="typist-header" >m {fifthSentence}</h1>
-
         </Typist>
       </div>
+      <div className="line2"></div>
     </div>
   );
 }
