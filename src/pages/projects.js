@@ -6,10 +6,11 @@ export default function Projects() {
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
-                        <h1>Hello</h1>
+                        <h1>Devcamp Fries</h1>
+                        <img className="card-img" src="https://i.postimg.cc/cCVkgcY9/fries.png" />
                     </div>
                     <div className="flip-card-back">
-                        <h1>Test</h1>
+                        <img src="./style/pictures/fries.png" />
                     </div>
                 </div>
             </div>

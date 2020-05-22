@@ -1,7 +1,7 @@
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
+    width: 25%;
+    height: 250px;
     perspective: 1000px;
   }
 
@@ -30,6 +30,19 @@
   .flip-card-front {
     background-color: black;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1{
+      margin-bottom: 15px;
+    }
+
+    .card-img{
+      height: auto;
+      width: 80%;
+    }
   }
   
   .flip-card-back {
@@ -37,3 +50,4 @@
     color: black;
     transform: rotateY(180deg);
   }
+
