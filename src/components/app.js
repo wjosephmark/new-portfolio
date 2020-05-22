@@ -36,6 +36,7 @@ export default function App(){
         <button className="nav-btn" onClick={() => navigate("/about-me")}>About Me</button>
         <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
         <button className="nav-btn" onClick={() => navigate("/resume")}>Résumé</button>
+        <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>
       </div>
       
 
