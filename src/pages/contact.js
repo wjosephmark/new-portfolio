@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import { navigate } from "hookrouter"
 
 export default function Contact(){
 
@@ -119,10 +120,10 @@ export default function Contact(){
                     <input className="small-input" type="text" name="Email" placeholder="Email" />
                 </div>
                 <div className="big-input-wrapper">
-                    <input className="big-input" type="text" name="Message" placeholder="Message" />
+                    <textarea className="big-input" name="Message" placeholder="Message" />
                 </div>
                 <div className="send-wrapper">
-                    <button type="submit">Send</button>
+                    <button className="send" type="submit">Send</button>
                 </div>
             </form>
             )
@@ -137,20 +138,13 @@ export default function Contact(){
 
     return(
         <div className="app">
-            {/* <form 
-                className="gform" 
-                method="POST" 
-                data-email="wjosephmark@gmail.com" 
-                action="https://script.google.com/macros/s/AKfycbzbAcMS7WjSs-IjWxFDBsMTUwuzQz2oAodzIf_k/exec" 
-                onSubmit={() => displayThankMessage()
-            }>
-                <input type="text" name="Name" placeholder="Name" />
-                <input type="text" name="Email" placeholder="Email" />
-                <input type="text" name="Message" placeholder="Message" />
-                <button type="submit">Send</button>
-            </form> */}
             {displayContent()}
-
+            <div className="nav-wrapper-contact">
+                <button className="nav-btn-left" onClick={() => navigate("/")}>Home</button>
+                <button className="nav-btn" onClick={() => navigate("/about-me")}>About Me</button>
+                <button className="nav-btn" onClick={() => navigate("/resume")}>Résumé</button>
+                <button className="nav-btn-right" onClick={() => navigate("/contact")}>Contact Me</button>
+            </div>
         </div>
     )
 }
