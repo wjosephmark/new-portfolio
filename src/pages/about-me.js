@@ -3,8 +3,19 @@ import React, {useState, useEffect} from "react"
 export default function AboutMe(){
     return(
         <div className="app">
-            <h1>Hello from About Me.</h1>
-            <iframe src="https://docs.google.com/document/d/e/2PACX-1vTEoi7hVCPqTkusuqww72io4iTYB21At-FsXdjfPM5M-Q3IuwmEJof-nqU7axlrWjNJxSdTU8g-Cf-F/pub?embedded=true"></iframe>
+            <div className="contact-wrapper">
+                <div className="heading-wrapper">
+                    <h1>About Me</h1>
+                </div>
+                <div className="photo-wrapper">
+                    <img src="https://avatars2.githubusercontent.com/u/61288503?s=460&u=ab9865db546865c0bbbb84e13d11c108ae385a5f&v=4" />
+                </div>
+                <div className="spacer" />
+                <div className="text-wrapper">
+                    <p>Hello, <br /> I am William Mark but I go by Joseph.  I recently completed a coding bootcamp at Bottega and I am currently
+                    looking to start my career as a programmer.  I have been coding for almost a year and I fall more in love with it everyday.</p>
+                </div>
+            </div>
         </div>
     )
 }
