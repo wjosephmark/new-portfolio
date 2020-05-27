@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import {navigate} from "hookrouter"
 
 export default function AboutMe(){
     return(
@@ -19,6 +20,14 @@ export default function AboutMe(){
                     family too.  I pride myself in being a happy and positive person and creating a fun and comfortable environment wherever I am.</p>
                 </div>
             </div>
+
+            <div className="nav-wrapper-about">
+                <button className="nav-btn-left" onClick={() => navigate("/")}>Home</button>
+                <button className="nav-btn" onClick={() => navigate("/about-me")}>About Me</button>
+                <button className="nav-btn" onClick={() => navigate("/resume")}>Résumé</button>
+                <button className="nav-btn-right" onClick={() => navigate("/contact")}>Contact Me</button>
+            </div>
+
         </div>
     )
 }
