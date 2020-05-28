@@ -125,6 +125,15 @@ export default function Contact(){
                 <div className="send-wrapper">
                     <button className="send" type="submit">Send</button>
                 </div>
+                <div className="info-holder">
+                    <div className="spacer" />
+                    <div className="email">
+                        < a href="mailto:wjosephmark@gmail.com">wjosephmark@gmail.com</a>
+                    </div>
+                    <div className="phone">
+                        <p>Cell - (801) 830-9786</p>
+                    </div>
+                </div>
             </form>
             )
         } else {

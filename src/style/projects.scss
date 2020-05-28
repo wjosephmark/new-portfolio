@@ -102,6 +102,8 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 
+    &:focus { outline: none; }
+
     &:hover{
       cursor: pointer;
       background-color: rgba(0, 0, 0, .15);
@@ -117,6 +119,8 @@
     border-bottom-right-radius: 10px;
     margin-bottom: 200px;
 
+    &:focus { outline: none; }
+
     &:hover{
       cursor: pointer;
       background-color: rgba(0, 0, 0, .15);
@@ -129,6 +133,8 @@
     background-color: rgba(0, 0, 0, .3);
     border: 2px solid;
     margin-bottom: 200px;
+
+    &:focus { outline: none; }s
 
     &:hover{
         cursor: pointer;

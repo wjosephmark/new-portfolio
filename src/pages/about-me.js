@@ -23,7 +23,7 @@ export default function AboutMe(){
 
             <div className="nav-wrapper-about">
                 <button className="nav-btn-left" onClick={() => navigate("/")}>Home</button>
-                <button className="nav-btn" onClick={() => navigate("/about-me")}>About Me</button>
+                <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
                 <button className="nav-btn" onClick={() => navigate("/resume")}>Résumé</button>
                 <button className="nav-btn-right" onClick={() => navigate("/contact")}>Contact Me</button>
             </div>
