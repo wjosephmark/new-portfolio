@@ -20,7 +20,7 @@ export default function Contact(){
             return elements[k].name;
         }else if(elements[k].length > 0){
             return elements[k].item(0).name;
-        }
+        } 
         }).filter(function(item, pos, self) {
         return self.indexOf(item) == pos && item;
         });
@@ -147,6 +147,9 @@ export default function Contact(){
 
     return(
         <div className="app">
+            <div className="header-wrapper-resume">
+                <h1>Contact</h1>
+            </div>
             {displayContent()}
             <div className="nav-wrapper-contact">
                 <button className="nav-btn-left" onClick={() => navigate("/")}>Home</button>
