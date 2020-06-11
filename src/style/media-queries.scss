@@ -372,10 +372,22 @@
 
     //Résumé
 
+    .header-wrapper-resume{
+        height: 100px;
+        padding-top: 15px;
+      
+        h1{
+          font-size: 50px;
+          border-bottom: solid black; 
+          border-top: solid black;
+        }
+      }
+      
+
     .resume-wrapper{
         background-color: rgba(0, 0, 0, .8);
-        width: 50%;
-        height: 850px;
+        width: 90%;
+        height: 700px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -383,7 +395,8 @@
         border-radius: 18px;
 
         iframe{
-            width: 40%;
+            width: 95%;
+            height: 500px;
         }
     
         a{
@@ -403,7 +416,7 @@
         }
     }
     .nav-wrapper-resume{
-    width: 50%;
+    width: 85%;
     height: 100px;
     display: flex;
     align-items: flex-end;
