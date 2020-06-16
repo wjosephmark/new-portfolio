@@ -30,6 +30,17 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h1>How old are you?</h1>
+                            <img className="card-img" src="https://i.imgur.com/jZh88Zr.png" />
+                        </div>
+                        <div className="flip-card-back">
+                            <a className="link" target="_blank" href="https://wjm-how-old.herokuapp.com/">Visit How Old</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         <div className="nav-wrapper-projects">

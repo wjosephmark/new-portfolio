@@ -11,7 +11,7 @@
 .flip-card-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 250px;
+  height: 500px;
   width: 80%;
   align-content: flex-end;
   justify-items: center;
@@ -23,7 +23,7 @@
   width: 300px;
   height: 300px;
   perspective: 1000px;
-
+  margin-top: 30px;
 }
 
 .flip-card-inner {
