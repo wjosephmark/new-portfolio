@@ -1,13 +1,38 @@
+//IMPORT 
+import {useRoutes} from "hookrouter";
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+
+//IMPORT PAGES
 import App from './App';
+import About from'./pages/About';
+import Projects from './pages/Projects';
+import Resume from './pages/Resume';
+import Contact from './pages/Contact'
+
+//MONITORING
 import reportWebVitals from './reportWebVitals';
 
+const routes = {
+  "/": () => <App />,
+  "/about": () => <About />,
+  "/projects": () => <Projects />,
+  "/resume": () => <Resume />,
+  "/contact": () => <Contact />
+}
+
+function Main(){
+  return(
+    <div>
+      {useRoutes(routes)}
+    </div>
+  )
+}
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Main />,
   document.getElementById('root')
 );
 
