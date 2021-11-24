@@ -30,10 +30,7 @@ export default function About(){
                 </div>
                 <div className="spacer" />
                 <div className="text-wrapper">
-                    <p>Hello, <br /> I am William Mark but I go by Joseph.  I recently completed a coding bootcamp at Bottega and I am currently
-                    looking to start my career as a programmer.  I have been coding for almost a year and I fall more in love with it everyday.
-                    I love hiking, mountain biking, skiing, rock climbing, and anything else outdoors.  I spend a lot of time with my friends and
-                    family too.  I pride myself in being a happy and positive person and creating a fun and comfortable environment wherever I am.</p>
+                    <p>Hello, I am Joseph Mark. I graduated from Bottega's full stack development course in May of 2020.  Because of the job market at the time I accepted a position as a customer service representative at a good company who was planning to expand their IS team in the future, hopeful that I could advance from within.  After about 5 months I started working as a Junior Systems Developer on January first, 2021. Since then I have worked heavily with AWS and cloud computing, designing scalable custom integrations, collaborating with teams in our company to ensure that they have the data needed to excel in their position, researching and implementing a VPN for the company, collaborating with HR to design an efficient onboarding process as far as the hardware and software needs of the employee being hired, and basic cybersecurity checks.  These have all been wonderful experiences, despite the many challenges and roadblocks that my team and I have overcome in the past year.</p>
                 </div>
             </div>
 
