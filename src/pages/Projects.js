@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {navigate} from "hookrouter"
-import Typist from 'react-typist'
+// import Typist from 'react-typist'
 
 export default function Projects() {
     return(
@@ -17,9 +17,9 @@ export default function Projects() {
 
             <div className="header-wrapper-projects">
                 <div className='top-line-projects' />
-                    <Typist cursor={{show: false}} avgTypingDelay={100}>
+                    {/* <Typist cursor={{show: false}} avgTypingDelay={100}>
                         <h1 className="typist-header">Projects</h1>
-                    </Typist>
+                    </Typist> */}
                 <div className='bottom-line-projects' />
             </div>
 

@@ -1,6 +1,6 @@
 import React from "react"
 import {navigate} from "hookrouter"
-import Typist from "react-typist"
+// import Typist from "react-typist"
 
 export default function Resume(){
     return(
@@ -17,9 +17,9 @@ export default function Resume(){
 
             <div className="header-wrapper-resume">
                 <div className='top-line-resume' />
-                    <Typist cursor={{show: false}} avgTypingDelay={100}>
+                    {/* <Typist cursor={{show: false}} avgTypingDelay={100}>
                         <h1 className="typist-header">Résumé</h1>
-                    </Typist>
+                    </Typist> */}
                 <div className='bottom-line-resume' />
             </div>
 

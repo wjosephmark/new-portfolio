@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { navigate } from "hookrouter"
-import Typist from "react-typist"
+// import Typist from "react-typist"
 
 export default function Contact(){
 
@@ -159,10 +159,10 @@ export default function Contact(){
 
             <div className="header-wrapper-contact">
                 <div className='top-line-contact' />
-
+{/* 
                 <Typist cursor={{show: false}}>
                     <h1 className="typist-header">Contact</h1>
-                </Typist>
+                </Typist> */}
 
                 <div className='bottom-line-contact' />
             </div>

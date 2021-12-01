@@ -1,5 +1,5 @@
-// import React, { useState, useEfffect } from 'react';
-import Typist from 'react-typist';
+import React, { useState, useEfffect } from 'react';
+// import Typist from 'react-typist';
 import {navigate} from "hookrouter"
 
 export default function App(){
@@ -18,10 +18,8 @@ export default function App(){
       <div className="content-wrapper">
         <div className="top-line" />
 
-        <div className="typist-wrapper">
-          <Typist cursor={{show: false}}>
-            <h1 className="typist-header">Hello, welcome to my portfolio!</h1>
-          </Typist>
+        <div class="typewriter-app">
+          <h1>Hello, welcome to my portfolio!</h1>
         </div>
 
         <div className="bottom-line" />
