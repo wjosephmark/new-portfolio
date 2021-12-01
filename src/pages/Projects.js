@@ -17,9 +17,9 @@ export default function Projects() {
 
             <div className="header-wrapper-projects">
                 <div className='top-line-projects' />
-                    {/* <Typist cursor={{show: false}} avgTypingDelay={100}>
-                        <h1 className="typist-header">Projects</h1>
-                    </Typist> */}
+                    <div class="typewriter-projects">
+                        <h1>Projects</h1>
+                    </div>
                 <div className='bottom-line-projects' />
             </div>
 
