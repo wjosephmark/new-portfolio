@@ -60,18 +60,32 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+
+            .typewriter-about h1 {
+              overflow: hidden; /* Ensures the content is not revealed until the animation */
+              white-space: nowrap; /* Keeps the content on a single line */
+              margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+              animation: 
+                typing .4s steps(40, end)
+            }
+            
+            /* The typing effect */
+            @keyframes typing {
+              from { width: 0 }
+              to { width: 100% }
+            }
         
             .top-line-about{
               animation: line 1.5s linear forwards;
               border-bottom:3px solid black;
               display:block;
-              max-width: 135px;
+              max-width: 100px;
             }
             .bottom-line-about{
               animation: line 1.5s linear forwards;
               border-bottom:3px solid black;
               display:block;
-              max-width: 135px;
+              max-width: 100px;
             }
           
             @keyframes line {

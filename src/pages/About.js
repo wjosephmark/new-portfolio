@@ -19,9 +19,11 @@ export default function About(){
             <div className="about-wrapper">
                 <div className="header-wrapper-about">
                     <div className="top-line-about" />
-                        {/* <Typist cursor={{show: false}} avgTypingDelay={100}>
-                            <h1 className="typist-header">About Me</h1>
-                        </Typist> */}
+
+                    <div class="typewriter-about">
+                        <h1>About</h1>
+                    </div>
+
                     <div className="bottom-line-about" />
                 </div>
                 <div className="spacer" />
