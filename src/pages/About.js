@@ -6,10 +6,11 @@ export default function About(){
     return(
         <div className="about-app">
 
-            <div className="nav-wrapper-about">
-                <div className="nav-buttons-wrapper-about">
-                    <button className="nav-btn" onClick={() => navigate("/")}>Home</button>
+
+            <div className="nav-wrapper">
+                <div className="nav-buttons-wrapper">
                     <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
+                    <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
                     <button className="nav-btn" onClick={() => navigate("/resume")}>Resume</button>
                     <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>
                 </div>

@@ -6,9 +6,9 @@ export default function Projects() {
     return(
         <div className="projects-app">
 
-            <div className="nav-wrapper-projects">
-                <div className="projects-nav-buttons-wrapper">
-                    <button className="nav-btn" onClick={() => navigate("/")}>Home</button>
+            <div className="nav-wrapper">
+                <div className="nav-buttons-wrapper">
+                    <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
                     <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
                     <button className="nav-btn" onClick={() => navigate("/resume")}>Resume</button>
                     <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>

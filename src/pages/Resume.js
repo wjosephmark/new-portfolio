@@ -5,12 +5,12 @@ import {navigate} from "hookrouter"
 export default function Resume(){
     return(
         <div className="resume-app">
-
-            <div className="nav-wrapper-resume">
-                <div className="resume-nav-buttons-wrapper">
-                    <button className="nav-btn" onClick={() => navigate("/")}>Home</button>
-                    <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
+            
+            <div className="nav-wrapper">
+                <div className="nav-buttons-wrapper">
                     <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
+                    <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
+                    <button className="nav-btn" onClick={() => navigate("/resume")}>Resume</button>
                     <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>
                 </div>
             </div>
