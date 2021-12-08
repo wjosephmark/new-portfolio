@@ -17,9 +17,9 @@ export default function Resume(){
 
             <div className="header-wrapper-resume">
                 <div className='top-line-resume' />
-                    {/* <Typist cursor={{show: false}} avgTypingDelay={100}>
-                        <h1 className="typist-header">Résumé</h1>
-                    </Typist> */}
+                    <div class="typewriter-resume">
+                        <h1>Résumé</h1>
+                    </div>
                 <div className='bottom-line-resume' />
             </div>
 
