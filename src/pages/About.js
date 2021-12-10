@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import {navigate} from "hookrouter"
 // import Typist from 'react-typist'
 
@@ -29,7 +29,7 @@ export default function About(){
                 </div>
                 <div className="spacer" />
                 <div className="photo-wrapper">
-                    <img src="https://avatars2.githubusercontent.com/u/61288503?s=460&u=ab9865db546865c0bbbb84e13d11c108ae385a5f&v=4" />
+                    <img alt="My headshot" src="https://avatars2.githubusercontent.com/u/61288503?s=460&u=ab9865db546865c0bbbb84e13d11c108ae385a5f&v=4" />
                 </div>
                 <div className="spacer" />
                 <div className="text-wrapper">

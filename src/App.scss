@@ -24,35 +24,35 @@
       justify-content: center;
       margin-top: 12vh;
 
-    // .typewriter-app h1 {
-    //   overflow: hidden; /* Ensures the content is not revealed until the animation */
-    //   white-space: nowrap; /* Keeps the content on a single line */
-    //   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    //   animation: 
-    //     typing 1.5s steps(40, end)
-    // }
+    .typewriter-app h1 {
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      animation: 
+        typing 1.5s steps(40, end)
+    }
     
-    // /* The typing effect */
-    // @keyframes typing {
-    //   from { width: 0 }
-    //   to { width: 100% }
-    // }
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
     
-    // // ANIMATED TOP LINE
-    // .top-line {
-    //     animation: line 2s linear forwards;
-    //     border-bottom:3px solid black;
-    //     display:block;
-    //     max-width: 465px;
-    // }
+    // ANIMATED TOP LINE
+    .top-line {
+        animation: line 2.5s linear forwards;
+        border-bottom:3px solid black;
+        display:block;
+        max-width: 475px;
+    }
     
-    //   //ANIMATED BOTTOM LINE
-    // .bottom-line {
-    //     animation: line 2s linear forwards;
-    //     border-bottom:3px solid black;
-    //     display:block;
-    //     max-width: 465px;
-    // }
+      //ANIMATED BOTTOM LINE
+    .bottom-line {
+        animation: line 2.5s linear forwards;
+        border-bottom:3px solid black;
+        display:block;
+        max-width: 475px;
+    }
       
     @keyframes line {
       from {
