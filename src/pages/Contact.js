@@ -28,80 +28,76 @@ function Contact() {
           .catch((err) => {
             console.log('FAILED...', err);
           });
-      };
+    };
   
     return (
         <div className="contact-app">
-                    <div className="nav-wrapper">
-                        <div className="nav-buttons-wrapper">
-                            <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
-                            <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
-                            <button className="nav-btn" onClick={() => navigate("/resume")}>Resume</button>
-                            <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>
-                        </div>
+            <div className="nav-wrapper">
+                <div className="nav-buttons-wrapper">
+                    <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
+                    <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
+                    <button className="nav-btn" onClick={() => navigate("/resume")}>Resume</button>
+                    <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>
+                </div>
+            </div>
+
+            <div className="header-wrapper-contact">
+                <div className='top-line-contact' />
+
+                    <div className="typewriter-contact">
+                    <h1>Contact</h1>
                     </div>
 
-                    <div className="header-wrapper-contact">
-                        <div className='top-line-contact' />
+                <div className='bottom-line-contact' />
+            </div>
+                <form onSubmit={onSubmit} className='gform'>
+                    <div className='small-input-wrapper'>
+                        <input
+                            className='small-input'
+                            type='text'
+                            name='from_name'
+                            placeholder='First Name'
+                            value={toSend.from_name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className='small-input'
+                            type='text'
+                            name='company_name'
+                            placeholder='Company'
+                            value={toSend.company_name}
+                            onChange={handleChange}
+                        />
 
-                            <div className="typewriter-contact">
-                            <h1>Contact</h1>
-                            </div>
-
-                        <div className='bottom-line-contact' />
+                        <input
+                            className='small-input'
+                            type='text'
+                            name='reply_to'
+                            placeholder='Email'
+                            value={toSend.reply_to}
+                            onChange={handleChange}
+                        />
                     </div>
 
-                        <form onSubmit={onSubmit} className='gform'>
-                            <div className='small-input-wrapper'>
-                                <input
-                                    className='small-input'
-                                    type='text'
-                                    name='from_name'
-                                    placeholder='First Name'
-                                    value={toSend.from_name}
-                                    onChange={handleChange}
-                                />
-                                <input
-                                    className='small-input'
-                                    type='text'
-                                    name='company_name'
-                                    placeholder='Company Name'
-                                    value={toSend.company_name}
-                                    onChange={handleChange}
-                                />
-
-                                <input
-                                    className='small-input'
-                                    type='text'
-                                    name='reply_to'
-                                    placeholder='Your Email'
-                                    value={toSend.reply_to}
-                                    onChange={handleChange}
-                                />
-                            </div>
-
-                            <div className='big-input-wrapper'>
-                                <input
-                                    className='big-input'
-                                    type='text'
-                                    name='message'
-                                    placeholder='Your Message'
-                                    value={toSend.message}
-                                    onChange={handleChange}
-                                /> 
-                            </div>
+                    <div className='big-input-wrapper'>
+                        <textarea
+                            className='big-input'
+                            name='message'
+                            placeholder='Message'
                             
-                            <div className='send-wrapper'>
-                                <button className='send' type='submit'>Send</button>
-                            </div>
-                        </form>
+                            value={toSend.message}
+                            onChange={handleChange}
+                        /> 
+                    </div>
+                    
+                    <div className='send-wrapper'>
+                        <button className='send' type='submit'>Send</button>
+                    </div>
+                </form>
         </div>
     );
   }
 export default Contact;
-
-
-
 
 // export default function Contact(){
 

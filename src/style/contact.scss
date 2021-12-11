@@ -104,9 +104,10 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-bottom: 20px;
     
         .small-input-wrapper{
-            width: 85%;
+            width: 90%;
             display: flex;
             align-items:center;
             justify-content: space-evenly;
@@ -121,6 +122,17 @@
                 background-color: white;
                 border-radius: 8px;
                 border: none;
+                margin-right:5px;
+                margin-left:5px;
+                padding-left: 10px;
+
+                &:focus{
+                    outline: none;
+                }
+
+                &:focus::placeholder{
+                    color: transparent;
+                }
             }
         }
     
@@ -140,6 +152,16 @@
                 background-color: white;
                 border-radius: 8px;
                 border: none;
+                padding-left: 10px;
+                padding-top: 5px;
+
+                &:focus{
+                    outline: none;
+                }
+
+                &:focus::placeholder{
+                    color: transparent;
+                }
             }
         }
     
