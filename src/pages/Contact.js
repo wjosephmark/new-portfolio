@@ -9,6 +9,7 @@ function Contact() {
       message: '',
       reply_to: '',
     });
+    var [messageSent, setMessageSent] = useState(false)
 
     const handleChange = (e) => {
       setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -16,40 +17,26 @@ function Contact() {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        send(
-          'service_pekq2ov',
-          'template_sd3t6uk',
-          toSend,
-          'user_whYywPvp96bdsWSHKGlKg'
-        )
-          .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-          })
-          .catch((err) => {
-            console.log('FAILED...', err);
-          });
+
+        setMessageSent(true)
+
+        // send(
+        //   'service_pekq2ov',
+        //   'template_sd3t6uk',
+        //   toSend,
+        //   'user_whYywPvp96bdsWSHKGlKg'
+        // )
+        //   .then((response) => {
+        //     console.log('SUCCESS!', response.status, response.text);
+        //   })
+        //   .catch((err) => {
+        //     console.log('FAILED...', err);
+        //   });
     };
-  
-    return (
-        <div className="contact-app">
-            <div className="nav-wrapper">
-                <div className="nav-buttons-wrapper">
-                    <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
-                    <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
-                    <button className="nav-btn" onClick={() => navigate("/resume")}>Resume</button>
-                    <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>
-                </div>
-            </div>
 
-            <div className="header-wrapper-contact">
-                <div className='top-line-contact' />
-
-                    <div className="typewriter-contact">
-                    <h1>Contact</h1>
-                    </div>
-
-                <div className='bottom-line-contact' />
-            </div>
+    const displayContent = () => {
+        if(!messageSent){
+            return(
                 <form onSubmit={onSubmit} className='gform'>
                     <div className='small-input-wrapper'>
                         <input
@@ -94,6 +81,38 @@ function Contact() {
                         <button className='send' type='submit'>Send</button>
                     </div>
                 </form>
+            )
+        }else{
+            return(
+                <div className='thank-message-wrapper'>
+                    <h1 className='thank-message'>Thank you for reaching out, I will get back to you shortly.</h1>
+                </div>
+            )
+        }
+    }
+  
+    return (
+        <div className="contact-app">
+            <div className="nav-wrapper">
+                <div className="nav-buttons-wrapper">
+                    <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
+                    <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
+                    <button className="nav-btn" onClick={() => navigate("/resume")}>Resume</button>
+                    <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>
+                </div>
+            </div>
+
+            <div className="header-wrapper-contact">
+                <div className='top-line-contact' />
+
+                    <div className="typewriter-contact">
+                    <h1>Contact</h1>
+                    </div>
+
+                <div className='bottom-line-contact' />
+            </div>
+
+            {displayContent()}
         </div>
     );
   }
