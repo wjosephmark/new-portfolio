@@ -20,18 +20,18 @@ function Contact() {
 
         setMessageSent(true)
 
-        // send(
-        //   'service_pekq2ov',
-        //   'template_sd3t6uk',
-        //   toSend,
-        //   'user_whYywPvp96bdsWSHKGlKg'
-        // )
-        //   .then((response) => {
-        //     console.log('SUCCESS!', response.status, response.text);
-        //   })
-        //   .catch((err) => {
-        //     console.log('FAILED...', err);
-        //   });
+        send(
+          'service_pekq2ov',
+          'template_sd3t6uk',
+          toSend,
+          'user_whYywPvp96bdsWSHKGlKg'
+        )
+          .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+          })
+          .catch((err) => {
+            console.log('FAILED...', err);
+          });
     };
 
     const displayContent = () => {
