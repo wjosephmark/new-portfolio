@@ -9,6 +9,14 @@ function Contact() {
       message: '',
       reply_to: '',
     });
+
+    var [inputStatus, setInputStatus] = useState({
+        from_stat: true,
+        company_stat: true,
+        message_stat: true,
+        reply_stat: true
+    })
+
     var [messageSent, setMessageSent] = useState(false)
 
     const handleChange = (e) => {
@@ -18,63 +26,160 @@ function Contact() {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        setMessageSent(true)
+        if(toSend.from_name == ''){
+            setInputStatus({...inputStatus, ["from_stat"]: false})
+        }
+        if(toSend.company_name == ''){
+            setInputStatus({...inputStatus, ['company_stat']: false})
+        }
+        if(toSend.reply_to == ''){
+            setInputStatus({...inputStatus, ['reply_stat']: false})
+        }
+        if(toSend.message == ''){
+            setInputStatus({...inputStatus, ['message_stat']: false})
+        }
 
-        send(
-          'service_pekq2ov',
-          'template_sd3t6uk',
-          toSend,
-          'user_whYywPvp96bdsWSHKGlKg'
-        )
-          .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-          })
-          .catch((err) => {
-            console.log('FAILED...', err);
-          });
+        console.log(toSend)
+
+        console.log(inputStatus)
+
+        if(toSend.from_name != '' && toSend.company_name != '' && toSend.reply_to != '' && toSend.message != ''){
+            send(
+                'service_pekq2ov',
+                'template_sd3t6uk',
+                toSend,
+                'user_whYywPvp96bdsWSHKGlKg'
+              )
+                .then((response) => {
+                  console.log('SUCCESS!', response.status, response.text);
+                  setMessageSent(true)
+                })           
+                .catch((err) => {
+                  console.log('FAILED...', err);
+                });
+        }
     };
 
-    const displayContent = () => {
+    const checkInput = (input) => {
+        if(input == 'from'){
+            if(inputStatus.from){                
+                return(
+                    <input
+                        className='small-input'
+                        type='text'
+                        name='from_name'
+                        placeholder='First Name'
+                        value={toSend.from_name}
+                        onChange={handleChange}
+                    />
+                )
+            }else{
+                return(
+                    <input
+                        className='small-input-error'
+                        type='text'
+                        name='from_name'
+                        placeholder='First Name'
+                        value={toSend.from_name}
+                        onChange={handleChange}
+                    />
+                )
+            }
+        }
+        
+        if(input == 'company'){
+            if(inputStatus.company){
+                return(
+                    <input
+                        className='small-input'
+                        type='text'
+                        name='company_name'
+                        placeholder='Company'
+                        value={toSend.company_name}
+                        onChange={handleChange}
+                    />
+                )
+            }else{
+                return(
+                    <input
+                        className='small-input-error'
+                        type='text'
+                        name='company_name'
+                        placeholder='Company'
+                        value={toSend.company_name}
+                        onChange={handleChange}
+                    />                    
+                )
+            }
+        }
+        
+        if(input == 'reply'){
+            if(inputStatus.reply){
+                return(
+                    <input
+                        className='small-input'
+                        type='text'
+                        name='reply_to'
+                        placeholder='Email'
+                        value={toSend.reply_to}
+                        onChange={handleChange}
+                    />
+                )
+            }else{
+                return(
+                    <input
+                        className='small-input-error'
+                        type='text'
+                        name='reply_to'
+                        placeholder='Email'
+                        value={toSend.reply_to}
+                        onChange={handleChange}
+                    />                   
+                )
+            }
+
+        }
+
+        if(input == 'message'){
+            if(inputStatus.message){
+                return(
+                    <textarea
+                        className='big-input'
+                        name='message'
+                        placeholder='Message'
+                        
+                        value={toSend.message}
+                        onChange={handleChange}
+                    /> 
+                )
+            }else{
+                return(
+                    <textarea
+                        className='big-input-error'
+                        name='message'
+                        placeholder='Message'
+                        
+                        value={toSend.message}
+                        onChange={handleChange}
+                    />                     
+                )
+            }
+        }
+    }
+
+    const displayInputs = () => {
         if(!messageSent){
             return(
                 <form onSubmit={onSubmit} className='gform'>
+                    {}
                     <div className='small-input-wrapper'>
-                        <input
-                            className='small-input'
-                            type='text'
-                            name='from_name'
-                            placeholder='First Name'
-                            value={toSend.from_name}
-                            onChange={handleChange}
-                        />
-                        <input
-                            className='small-input'
-                            type='text'
-                            name='company_name'
-                            placeholder='Company'
-                            value={toSend.company_name}
-                            onChange={handleChange}
-                        />
-
-                        <input
-                            className='small-input'
-                            type='text'
-                            name='reply_to'
-                            placeholder='Email'
-                            value={toSend.reply_to}
-                            onChange={handleChange}
-                        />
+                        {checkInput('from')}
+                        {checkInput('company')}
+                        {checkInput('reply')}
                     </div>
 
                     <div className='big-input-wrapper'>
-                        <textarea
-                            className='big-input'
-                            name='message'
-                            placeholder='Message'
-                            
-                            value={toSend.message}
-                            onChange={handleChange}
-                        /> 
+                        {checkInput('message')}
                     </div>
                     
                     <div className='send-wrapper'>
@@ -112,7 +217,7 @@ function Contact() {
                 <div className='bottom-line-contact' />
             </div>
 
-            {displayContent()}
+            {displayInputs()}
         </div>
     );
   }
