@@ -18,6 +18,7 @@ function Contact() {
     })
 
     var [messageSent, setMessageSent] = useState(false)
+    var [messasgeAttempt, setMessageAttempt] = useState(false)
 
     const handleChange = (e) => {
       setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -39,10 +40,6 @@ function Contact() {
             setInputStatus({...inputStatus, ['message_stat']: false})
         }
 
-        console.log(toSend)
-
-        console.log(inputStatus)
-
         if(toSend.from_name != '' && toSend.company_name != '' && toSend.reply_to != '' && toSend.message != ''){
             send(
                 'service_pekq2ov',
@@ -62,7 +59,8 @@ function Contact() {
 
     const checkInput = (input) => {
         if(input == 'from'){
-            if(inputStatus.from){                
+            console.log(inputStatus.from_stat)
+            if(inputStatus.from_stat){            
                 return(
                     <input
                         className='small-input'
@@ -86,9 +84,9 @@ function Contact() {
                 )
             }
         }
-        
+
         if(input == 'company'){
-            if(inputStatus.company){
+            if(inputStatus.company_stat){
                 return(
                     <input
                         className='small-input'
@@ -114,7 +112,7 @@ function Contact() {
         }
         
         if(input == 'reply'){
-            if(inputStatus.reply){
+            if(inputStatus.reply_stat){
                 return(
                     <input
                         className='small-input'
@@ -141,7 +139,7 @@ function Contact() {
         }
 
         if(input == 'message'){
-            if(inputStatus.message){
+            if(inputStatus.message_stat){
                 return(
                     <textarea
                         className='big-input'
