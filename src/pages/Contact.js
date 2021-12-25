@@ -10,36 +10,33 @@ function Contact() {
       reply_to: '',
     });
 
-    var [inputStatus, setInputStatus] = useState({
-        from_stat: true,
-        company_stat: true,
-        message_stat: true,
-        reply_stat: true
-    })
+    var [fromStat, setFromStat] = useState(false)
+    var [companyStat, setCompanyStat] = useState(false)
+    var [replyStat, setReplyStat] = useState(false)
+    var [messageStat, setMessageStat] = useState(false)
 
     var [messageSent, setMessageSent] = useState(false)
-    var [messasgeAttempt, setMessageAttempt] = useState(false)
 
     const handleChange = (e) => {
       setToSend({ ...toSend, [e.target.name]: e.target.value });
     };
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
 
         if(toSend.from_name == ''){
-            setInputStatus({...inputStatus, ["from_stat"]: false})
+            setFromStat(true)
         }
         if(toSend.company_name == ''){
-            setInputStatus({...inputStatus, ['company_stat']: false})
+            setCompanyStat(true)
         }
         if(toSend.reply_to == ''){
-            setInputStatus({...inputStatus, ['reply_stat']: false})
+            setReplyStat(true)
         }
         if(toSend.message == ''){
-            setInputStatus({...inputStatus, ['message_stat']: false})
+            setMessageStat(true)
         }
-
+        
         if(toSend.from_name != '' && toSend.company_name != '' && toSend.reply_to != '' && toSend.message != ''){
             send(
                 'service_pekq2ov',
@@ -58,9 +55,9 @@ function Contact() {
     };
 
     const checkInput = (input) => {
+        // console.log(inputStatus)
         if(input == 'from'){
-            console.log(inputStatus.from_stat)
-            if(inputStatus.from_stat){            
+            if(!fromStat){            
                 return(
                     <input
                         className='small-input'
@@ -86,7 +83,7 @@ function Contact() {
         }
 
         if(input == 'company'){
-            if(inputStatus.company_stat){
+            if(!companyStat){
                 return(
                     <input
                         className='small-input'
@@ -112,7 +109,7 @@ function Contact() {
         }
         
         if(input == 'reply'){
-            if(inputStatus.reply_stat){
+            if(!replyStat){
                 return(
                     <input
                         className='small-input'
@@ -139,7 +136,7 @@ function Contact() {
         }
 
         if(input == 'message'){
-            if(inputStatus.message_stat){
+            if(!messageStat){
                 return(
                     <textarea
                         className='big-input'
