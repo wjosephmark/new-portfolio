@@ -19,6 +19,16 @@ function Contact() {
 
     const handleChange = (e) => {
       setToSend({ ...toSend, [e.target.name]: e.target.value });
+
+      if(e.target.name == 'from_name'){
+          setFromStat(false)
+      }else if(e.target.name == 'company_name'){
+          setCompanyStat(false)
+      }else if(e.target.name == 'reply_to'){
+          setReplyStat(false)
+      }else if(e.target.name == 'message'){
+          setMessageStat(false)
+      }
     };
 
     const onSubmit = async (e) => {
