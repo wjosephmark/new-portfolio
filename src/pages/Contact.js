@@ -65,7 +65,6 @@ function Contact() {
     };
 
     const checkInput = (input) => {
-        // console.log(inputStatus)
         if(input == 'from'){
             if(!fromStat){            
                 return(
