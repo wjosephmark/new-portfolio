@@ -1,32 +1,26 @@
-import React from 'react';
+import React from "react";
 // import Typist from 'react-typist';
-import {navigate} from "hookrouter"
-
-export default function App(){
-
+// import {navigate} from "hookrouter"
+var sets = [
+  {
+    set_title: "EC2",
+  },
+  {
+    set_title: "Lambda",
+  },
+];
+export default function App() {
   return (
-    <div className='home-app'>
-      
-      <div className="nav-wrapper">
-          <div className="nav-buttons-wrapper">
-              <button className="nav-btn" onClick={() => navigate("/projects")}>Projects</button>
-              <button className="nav-btn" onClick={() => navigate("/about")}>About Me</button>
-              <button className="nav-btn" onClick={() => navigate("/resume")}>Resume</button>
-              <button className="nav-btn" onClick={() => navigate("/contact")}>Contact Me</button>
-          </div>
-      </div>
-
+    <div className="home-app">
       <div className="content-wrapper">
-        <div className="top-line" />
-
-        <div class="typewriter-app">
-          <h1>Hello, welcome to my portfolio!</h1>
+        <div className="sets-wrapper">
+          {sets.map(({ set_title }) => (
+            <div className="set-wrapper">
+              <h1 className="set-title">{set_title}</h1>
+            </div>
+          ))}
         </div>
-
-        <div className="bottom-line" />
-        
       </div>
-
     </div>
   );
 }
